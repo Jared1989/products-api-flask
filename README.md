@@ -61,8 +61,8 @@ Example Response:
 Example Request:
 
 ```sh
-curl http://127.0.0.1:5000/products
-curl https://nyu-info-2335-products-api-csv.herokuapp.com/products
+curl -X POST http://127.0.0.1:5000/products -d '{"aisle":"pending assignment", "department": "pending assignment", "name": "My New Product!", "price": "100.00"}'
+curl -X POST https://nyu-info-2335-products-api-csv.herokuapp.com/products -d '{"aisle":"pending assignment", "department": "pending assignment", "name": "My New Product!", "price": "100.00"}'
 ```
 
 Example Response Body:
@@ -84,8 +84,8 @@ Example Response Body:
 Example Request:
 
 ```sh
-curl http://127.0.0.1:5000/products/4
-curl https://nyu-info-2335-products-api-csv.herokuapp.com/products/4
+curl -X PUT http://127.0.0.1:5000/products/4 -d '{"aisle":"grains rice dried goods", "department": "dry goods pasta", "name": "Organic Whole Wheat Pasta", "price": "2.50"}'
+curl -X PUT https://nyu-info-2335-products-api-csv.herokuapp.com/products/4 -d '{"aisle":"grains rice dried goods", "department": "dry goods pasta", "name": "Organic Whole Wheat Pasta", "price": "2.50"}'
 ```
 
 Example Response Body:
@@ -96,7 +96,7 @@ Example Response Body:
   "department": "dry goods pasta",
   "id": 4,
   "name": "Organic Whole Wheat Pasta",
-  "price": 100.00
+  "price": 2.50
 }
 ```
 
@@ -107,17 +107,46 @@ Example Response Body:
 Example Request:
 
 ```sh
-curl http://127.0.0.1:5000/products/4
-curl https://nyu-info-2335-products-api-csv.herokuapp.com/products/4
+curl -X DELETE http://127.0.0.1:5000/products/4
+curl -X DELETE https://nyu-info-2335-products-api-csv.herokuapp.com/products/4
 ```
 
 Example Response Body:
 
 ```json
 {
-  "message": "Deleted Successfully"
+  "message": "Product Deleted Successfully"
 }
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## [Contributing](/CONTRIBUTING.md)
 
